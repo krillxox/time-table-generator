@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"></head>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1569818907/jquery.table2excel.min.js"></script>
+    <script type="text/javascript" src="gen.js"></script> 
+
+
+  <body onload="print()">
+    <div id="tt" class="container"></div>
+    <center>
+        <button id="exporttable" class="btn btn-lg btn-primary">Export</button>
+    </center>
+</body>
+<script>
+$(function(){
+    $("#exporttable").click(function(e){
+        var table = $('table')
+        if (table && table.length) {
+            $(table).table2excel({
+                exclude: ".noExl",
+                name: 'Excel Document Name',
+                filename: "TT" + '.xls',
+                fileext: '.xls',
+                exclude_image: true,
+                exclude_links: true,
+                exclude_inputs: true,
+                preserveColors: false
+            });
+        }
+    });
+});
+</script>
+</html>

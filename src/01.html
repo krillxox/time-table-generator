@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .btn-block{
+                position: fixed;
+                bottom: 0;
+                /* right: 0; */
+                /* width: 100; */
+            }
+            /* .center {
+    width: 40%;
+    height : 100%;
+    min-height: 40vh;
+    margin:auto;
+    text-align: center;
+    vertical-align: center;
+    background-color: #F3F3F3;
+
+    padding: 20px;
+} */
+        </style>
+        <title>Second page</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script type="text/javascript" src="gen.js"></script>
+    </head>
+    <body>
+        <div class="p-3 mb-2 bg-primary text-white">
+            <h1>Let us know about your schedule</h1>
+        </div>
+        <center>
+     <form>
+        <div id="default" class="form-group">
+            <label for="startingTime">Your classes start at:</label>
+            <select class="sTime" id="sTime">
+                <option value="420">07:00</option>
+                <option value="450">07:30</option>
+                <option value="480">08:00</option>
+                <option value="510">08:30</option>
+                <option value="540">09:00</option>
+                <option value="570">09:30</option>
+            </select>
+            <br>
+            <br>
+            <label for="nClasses">No of classes</label>
+            <select class="nClasses" id="nClasses">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <br>
+            <label for="classDuration">Class Duration</label>
+            <select  id="classDuration">
+                <option value="30">30</option>
+                <option value="60">1 hr</option>
+                <option value="120">2 hr</option>
+            </select>
+            <br>
+            <br>
+            <label for="lunch">Luch duration:</label>
+            <select class="lunchDuration" id="lunchDuration">
+                <option value="15">15 min</option>
+                <option value="30">30 min</option>
+                <option value="45">45 min</option>
+                <option value="60">1 hour</option>
+                <option value="90">1 hour 30 min</option>
+                <option value="120">2 hour</option>
+            </select>
+        </div>
+    </form>
+</center>
+         <br>
+        <br>
+            <div class="parent">
+                <label for="subject">Enter subject name: </label>
+                <br>
+            <input type="name" class="name" placeholder="Subject 1">
+            <button type="button" class="btn btn-success" onclick="addField()">+</button>
+            </div>
+        <div id="redirect">
+            <button class="btn btn-primary btn-lg btn-block" onclick="next()">Generate time table</button>
+        </div>
+    </body>
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+    <script>
+        var c = 0
+        var arr = []
+        id = name
+
+        function addField(){
+            arr.push(document.getElementsByClassName('name')[c].value);
+            c++
+            var newDiv = document.createElement('input')
+            newDiv.setAttribute('type', 'name')
+            newDiv.setAttribute('placeholder', 'Subject  ' + (c + 1))
+            newDiv.setAttribute('class', 'name')
+
+            
+            //console.log(newDiv.value);
+            document.body.appendChild(document.createElement('br'))
+            document.body.appendChild(document.createElement('br'))
+            // document.appendChild(document.createElement('center'))
+            document.body.appendChild(newDiv)
+            // document.appendChild(document.createElement('/center'))
+        }
+        
+    </script>
+</html>

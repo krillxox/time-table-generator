@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  </head>
+  <body class="container">
+    <div class="jumbotron text-center bg-dark text-light">
+      <h1>Welcome to Time Table Generator</h1>
+      <p class="text-light bg-dark">Before getting started we want you to answer some questions.</p>
+    </div>
+    <button type="button" class="btn btn-primary btn-lg" onclick="next()">Get Started</button>
+  </body>
+  <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>  
+    $('btn').button('toggle')
+    function next(){
+      window.location.replace("01.html")
+    }
+  </script>
+</html>
