@@ -2,8 +2,8 @@
 Made on electron.
 
 ## Features
-Can make time table according to time and subject names.\n
-Can be exported as .xls extension.
+<p>Can make time table according to time and subject names.</p>
+<p>Can be exported as .xls extension.</p>
 
 # How to install?
 Follow steps on https://github.com/electron/electron-packager.
