@@ -2,7 +2,7 @@
 Made on electron.
 
 ## Features
-Can make time table according to time and subject names.
+Can make time table according to time and subject names.\n
 Can be exported as .xls extension.
 
 # How to install?
