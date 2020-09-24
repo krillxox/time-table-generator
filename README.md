@@ -1,0 +1,9 @@
+# Time Table Generator
+Made on electron.
+
+## Features
+Can make time table according to time and subject names.
+Can be exported as .xls extension.
+
+# How to install?
+Follow steps on https://github.com/electron/electron-packager.
